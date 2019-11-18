@@ -6,6 +6,7 @@ const nameList = require('./nameList');
 const namestat = require('./namestat');
 const oldCat = require('./oldCat');
 const youngKitty =require('./youngKitty');
+const catFactoryLoud = require('./catFactoryLoud');
 var expect = require('chai').expect;
 
 // Проверка создания кота
@@ -16,7 +17,19 @@ describe('Array', function () {
       if (cat.hasOwnProperty('name') === false) {
         throw new Error('Not Name');
       }
-    });
+      if (cat.hasOwnProperty('age') === false) {
+        throw new Error('Not AGE');
+      }
+      if (cat.hasOwnProperty('gender') === false) {
+        throw new Error('Not gender');
+      }
+      if (cat.hasOwnProperty('leggsCount') === false) {
+        throw new Error('Not leggsCount');
+      }
+      if (cat.hasOwnProperty('tailLength') === false) {
+        throw new Error('Not tailLength');
+      }
+     });
   });
 });
 
@@ -136,5 +149,31 @@ describe('Array', function() {
       expect(can1[i]).to.equal(can2) 
       }
     });
+  });
+});
+
+describe('Array', function () {
+  describe('catFactoryLoud', function () {
+    it('generate cats', function () {
+      const cat = catFactoryLoud();
+      if (cat.hasOwnProperty('name') === false) {
+        throw new Error('Not Name');
+      }
+      if (cat.hasOwnProperty('age') === false) {
+        throw new Error('Not AGE');
+      }
+      if (cat.hasOwnProperty('gender') === false) {
+        throw new Error('Not gender');
+      }
+      if (cat.hasOwnProperty('leggsCount') === false) {
+        throw new Error('Not leggsCount');
+      }
+      if (cat.hasOwnProperty('tailLength') === false) {
+        throw new Error('Not tailLength');
+      }
+      if (cat.hasOwnProperty('loudness') === false) {
+        throw new Error('Not loudness');
+      }
+     });
   });
 });
