@@ -1,14 +1,10 @@
-const catsGroupGenerate = require('./catsGroupGenerate');
-
-const list = catsGroupGenerate(50);
-
-function youngKitty(n) {
+function youngKitty(n, list) {
   const youg = list.filter(({ gender }) => gender === 'ж');
   youg.sort((a, b) => {
     return a.age - b.age;
   });
   youg.splice(n, youg.length);
-  return youg.forEach(({ name }) => console.log(name));
+  return youg;
 }
 
 module.exports = youngKitty;
