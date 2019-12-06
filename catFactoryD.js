@@ -7,10 +7,10 @@ const ggender = ['м', 'ж'];
 const glegscount = [3, 4, 5];
 const gtaillength = [10, 13, 16, 17, 20, 23];
 
-const defaults = {
-  name: 'Василий',
-  age: 7,
-};
+// const defaults = {
+// name: 'Василий',
+// age: 7,
+// };
 
 function catFactoryD(defaults) {
   const cat = {
